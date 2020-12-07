@@ -1,0 +1,254 @@
+Unidad I
+
+Modelo OSI
+Funcionalidad
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+Agenda:
+1. Modelo OSI
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+1. Funciones: Capas del modelo OSI
+Las diferentes funciones establecidas en la arquitectura
+OSI se han estructurado en siete niveles. Cada nivel
+tiene unas funciones perfectamente definidas. Las
+funciones asignadas a los diferentes niveles se
+complementan entre sí.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+2. Problemas del modelo OSI
+Algunas de las capas que están prácticamente
+vacías; es decir, tienen pocas funciones definidas
+dentro de ellas, mientras que otras capas tienen
+muchas. Las capas de sesión y presentación no se
+usan en la mayoría de las aplicaciones.
+Otro problema que tiene el modelo OSI es que
+algunas funciones se repiten en muchas capas, lo
+que hace que muchos servicios y programas
+estén duplicados en diferentes capas. Esto
+contribuye a que aumente el tamaño de las
+cabeceras de control que se transmiten.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+3. Nivel Físico
+Se encarga de pasar bits al medio físico y
+de suministrar servicios a la siguiente
+capa. Para ello debe definir las señales y
+características físicas y electrónicas de
+los equipos que intervienen en la
+comunicación. A este nivel se especifica
+el tipo de tarjeta de red, velocidad de
+transmisión, medio de transmisión, etc.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+3. Nivel Físico
+Algunas de las funciones definidas para
+el nivel físico son:
+✓ Garantizar la compatibilidad de los
+conectores indicando el número de
+pines que tendrá cada conector y la
+función de cada uno de ellos.
+✓ Especificar el tipo de medio de
+transmisión que se utilizará, fijar los
+niveles de tensión, la duración de los
+pulsos eléctricos, la topología de la
+red, etc.
+✓ Transformar la secuencia de bits que
+se desea enviar en una señal que se
+puede transmitir por el medio físico.
+Mg. Ing. Quispe Varón Celestino Medardo
+
+4. Nivel de Enlace
+El nivel de enlace de datos se encarga
+de que los datos se envíen libres de
+errores a su destino. Se ocupa del
+tratamiento de los errores que se
+produzcan en la recepción de las
+tramas, de eliminar tramas erróneas,
+solicitar retransmisiones, descartar
+tramas duplicadas, adecuar el flujo de
+datos entre emisores rápidos y
+receptores lentos, etc.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+4. Nivel de Enlace
+Funciones del nivel de enlace
+✓ Fraccionar los mensajes en tramas,
+enviar en secuencia las tramas por la
+línea de transmisión y esperar la
+confirmación del receptor.
+✓ Tratar los errores eliminando tramas
+incorrectas, descartando tramas
+duplicadas,
+solicitando
+retransmisiones, etc.
+✓ Evitar la saturación del receptor
+utilizando mecanismos de control de
+flujo. o Controlar el acceso a un
+medio de transmisión compartido
+por varios emisores y receptores.
+Mg. Ing. Quispe Varón Celestino Medardo
+
+5. Nivel de Red
+El nivel de red se encarga de enviar
+paquetes a destinatarios que no están
+en la misma red. La red destino podría
+usar un sistema de direccionamiento
+distinto al de la red de origen. También
+es posible que la segunda red no admita
+paquetes de las mismas dimensiones
+que la primera. En general, en este nivel
+se resuelven los problemas generados
+por redes heterogéneas.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+5. Nivel de Red
+Algunas de las funciones del nivel de red
+son:
+✓ Encaminamiento: elegir la ruta más
+adecuada para que el bloque de datos
+de este nivel paquete) llegue a su
+destino.
+✓ Tratamiento de la congestión evitando
+cuellos de botella en la red.
+
+✓ Resolución de problemas relacionados
+con redes heterogéneas: sistemas de
+direccionamiento distintos, paquetes
+de distintas dimensiones, etc.
+Mg. Ing. Quispe Varón Celestino Medardo
+
+6. Nivel de Transporte
+El nivel de transporte se encarga de la
+comunicación entre el emisor y el
+receptor, mientras que el nivel de
+enlace de datos se ocupa de la
+transmisión entre los diferentes nodos
+de la red por los que ha de pasar la
+información para llegar desde el emisor
+al receptor.
+
+Entre las funciones del nivel de
+transporte están:
+✓ Aceptar datos del nivel de sesión y
+fraccionarlos para enviarlos por la
+red.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+6. Nivel de Transporte
+✓ Asegurarse de que los datos
+transmitidos llegan correctamente al
+receptor.
+✓ Multiplexar conexiones distintas de
+la capa de sesión de forma
+transparente al usuario.
+✓ Establecer comunicaciones entre el
+emisor y el receptor.
+
+✓ Controlar el flujo de la transmisión
+entre el emisor y el receptor.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+7. Nivel de Sesión
+Permite agrupar datos de diversas
+aplicaciones para enviarlos juntos, o
+incluso, detener la comunicación y
+restablecer el envío tras realizar algún
+tipo de actividad. Debido a la existencia
+de buzones, el nivel de sesión mejora el
+servicio de la capa de transporte. Si la
+conexión establecida extremo a
+extremo se interrumpe un momento
+debido a un problema en la línea, el
+nivel de sesión no lo notará puesto que
+cuando la capa de transporte restablece
+la comunicación, se transmitieran los
+datos a partir del último bloque
+transmitido antes del corte en la línea.
+Mg. Ing. Quispe Varón Celestino Medardo
+
+7. Nivel de Sesión
+Algunas de las funciones del nivel de
+sesión son:
+✓ Establecimiento de la sesión y
+creación de un buzón donde se
+recibirán mensajes procedentes de
+las capas inferiores.
+✓ Intercambio de datos entre los
+buzones del emisor y el receptor
+siguiendo unas reglas de diálogo.
+✓ Control del diálogo: Determinar si la
+comunicación será o no bidireccional
+y simultanea.
+✓ Tratamiento de las interrupciones
+por fallos en la red.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+8. Nivel de Presentación
+El nivel de presentación también se encarga
+de comprimir los datos para que las
+comunicaciones sean menos costosas o de
+la encriptación de la información para
+garantizar su privacidad.
+Las funciones básicas
+presentación son:
+
+del
+
+nivel
+
+de
+
+✓ Coordinar los códigos de representación
+de la información alfanumérica (por
+ejemplo, código ASCII).
+✓ Compresión de los datos
+
+✓ Encriptar la información para garantizar
+la privacidad.
+Mg. Ing. Quispe Varón Celestino Medardo
+
+9. Nivel de Aplicación
+En este nivel se definen los protocolos
+que utilizan las aplicaciones de los
+usuarios para comunicarse. Estos
+protocolos atienden las peticiones de
+las
+aplicaciones
+que
+requieren
+comunicación a través de la red y
+permiten que varias aplicaciones
+compartan la red. Cada una de las
+diferentes aplicaciones de usuario lleva
+asociado un protocolo específico del
+nivel de aplicación.
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+9. Nivel de Aplicación
+Entre ellos se pueden destacar:
+
+✓ correo electrónico
+✓ control de seguridad
+
+✓ transferencia de ficheros
+✓ emulación de terminales
+✓ carga de programas a través de líneas
+de comunicaciones
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+Mg. Ing. Quispe Varón Celestino Medardo
+
+

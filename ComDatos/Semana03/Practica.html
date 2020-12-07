@@ -1,0 +1,101 @@
+<h1 id="realizando-un-análisis-profundo-del-modelo-osi">Realizando un análisis profundo del modelo OSI</h1>
+<h2 id="section">1</h2>
+<h2 id="mencione-los-tipos-de-aplicaciones-posibles-y-en-que-forma-se-da-el-proceso-de-software-en-la-capa-de-aplicación."><strong>Mencione los tipos de aplicaciones posibles y en que forma se da el proceso de software en la capa de aplicación.</strong></h2>
+<p>El modelo OSI define la capa de aplicación como la interfaz de usuario responsable de mostrar al usuario la información recibida. En cambio, el Conjunto de protocolos de Internet no se ocupa de esos detalles. El OSI también distingue explícitamente la funcionalidad adicional por debajo de la capa de aplicación, pero por encima de la capa de transporte en dos niveles adicionales: la capa de sesión y la capa de presentación. OSI especifica una estricta separación modular de la funcionalidad en estas capas y proporciona implementaciones de protocolo para cada capa.</p>
+<p>El documento de definición de la IETF para la capa de aplicación en el Conjunto de protocolos de Internet es el <a href="https://tools.ietf.org/html/rfc1123">RFC 1123</a>. Proporcionan un conjunto inicial de protocolos que abarcan los principales aspectos de la funcionalidad de la Internet:</p>
+<ul>
+<li>Ingreso remoto a los hosts: Telnet (Actualmente SSH)</li>
+<li>Transferencia de archivos: Protocolo de transferencia de archivos (FTP/SFTP), Protocolo de transferencia de archivos triviales (TFTP)</li>
+<li>Transporte de correo electrónico: Protocolo simple de transferencia de correo (SMTP)</li>
+<li>Apoyo a la red: Sistema de nombres de dominio (DNS)</li>
+<li>Inicialización del host: BOOTP</li>
+<li>Gestión de host remoto: Protocolo simple de gestión de redes (SNMP), Protocolo común de información de gestión sobre TCP (CMOT)a</li>
+</ul>
+<h2 id="section-1">2</h2>
+<h2 id="de-acuerdo-al-video-mencione-las-funcionalidades-de-cada-una-de-las-capas-que-constituyen-el-modelo-osi-realizando-un-análisis-comparativo-con-las-diapositivas-que-corresponden-al-marco-teórico-y-práctico."><strong>De acuerdo al video mencione las funcionalidades de cada una de las capas que constituyen el modelo OSI, realizando un análisis comparativo con las diapositivas que corresponden al marco teórico y práctico.</strong></h2>
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 20%" />
+<col style="width: 16%" />
+<col style="width: 10%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nivel Físico</th>
+<th>Nivel de Enlace</th>
+<th>Nivel de Red</th>
+<th>Nivel de Transporte</th>
+<th>Nivel de Sesión</th>
+<th>Nivel de Presentación</th>
+<th>Nivel de Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Garantizar la compatibilidad de los conectores indicando el número de pines que tendrá cada conector y la función de cada uno de ellos.</td>
+<td>Fraccionar los mensajes en tramas, enviar en secuencia las tramas por la línea de transmisión y esperar la confirmación del receptor.</td>
+<td>Encaminamiento: elegir la ruta más adecuada para que el bloque de datos de este nivel paquete) llegue a su destino.</td>
+<td>Aceptar datos del nivel de sesión y fraccionarlos para enviarlos por la red.</td>
+<td>Establecimiento de la sesión y creación de un buzón donde se recibirán mensajes procedentes de las capas inferiores.</td>
+<td>Coordinar los códigos de representación de la información alfanumérica (por ejemplo, código ASCII).</td>
+<td>correo electrónico</td>
+</tr>
+<tr class="even">
+<td>Especificar el tipo de medio de transmisión que se utilizará, fijar los niveles de tensión, la duración de los pulsos eléctricos, la topología de la red, etc.</td>
+<td>Tratar los errores eliminando tramas incorrectas, descartando tramas duplicadas, solicitando retransmisiones, etc.</td>
+<td>Tratamiento de la congestión evitando cuellos de botella en la red.</td>
+<td>Asegurarse de que los datos transmitidos llegan correctamente al receptor.</td>
+<td>Intercambio de datos entre los buzones del emisor y el receptor siguiendo unas reglas de diálogo.</td>
+<td>Compresión de los datos</td>
+<td>control de seguridad</td>
+</tr>
+<tr class="odd">
+<td>Transformar la secuencia de bits que se desea enviar en una señal que se puede transmitir por el medio físico.</td>
+<td>Evitar la saturación del receptor utilizando mecanismos de control de flujo. o Controlar el acceso a un medio de transmisión compartido por varios emisores y receptores.</td>
+<td>Resolución de problemas relacionados con redes heterogéneas: sistemas de direccionamiento distintos, paquetes de distintas dimensiones, etc.</td>
+<td>Multiplexar conexiones distintas de la capa de sesión de forma transparente al usuario.</td>
+<td>Control del diálogo: Determinar si la comunicación será o n bidireccional y simultanea.</td>
+<td>Encriptar la información para garantizar la privacidad.</td>
+<td>transferencia de ficheros</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>Establecer comunicaciones entre el emisor y el receptor.</td>
+<td>Tratamiento de las interrupciones por fallos en la red.</td>
+<td></td>
+<td>emulación de terminales</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>Controlar el flujo de la transmisión entre el emisor y el receptor.</td>
+<td></td>
+<td></td>
+<td>carga de programas a través de líneas de comunicaciones</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-2">3</h2>
+<h2 id="que-diferencia-existe-entre-segmentación-y-reensamblaje.-por-qué-se-da-dicho-proceso-explique-de-manera-clara-lo-que-logro-comprender-en-el-video-"><strong>Que diferencia existe entre segmentación y reensamblaje. ¿Por qué se da dicho proceso? Explique de manera clara lo que logro comprender en el video-</strong></h2>
+<h2 id="section-3">4</h2>
+<h2 id="que-diferencia-existe-entre-direccionamiento-y-enrutamiento.-cómo-se-lleva-acabo-cada-uno-de-ellos-que-dispositivos-se-utilizan-para-realizar-este-trabajo-"><strong>Que diferencia existe entre direccionamiento y enrutamiento. ¿Cómo se lleva acabo cada uno de ellos? Que dispositivos se utilizan para realizar este trabajo-</strong></h2>
+<h2 id="section-4">5</h2>
+<h2 id="que-diferencia-existe-entre-lls-y-mac-cómo-realizan-sus-trabajos-cada-una-de-ellas-coloque-ejemplos-que-ilustre-su-respuesta-"><strong>Que diferencia existe entre LLS y MAC, ¿Cómo realizan sus trabajos cada una de ellas? Coloque ejemplos que ilustre su respuesta-</strong></h2>
+<h2 id="section-5">6</h2>
+<h2 id="como-se-da-el-flujo-de-datos-en-la-capa-física.-quien-realiza-el-trabajo-de-codificación-de-los-datos-por-donde-viajan-dichos-datos.-especifique-su-respuesta-con-ejemplos-ilustrativos."><strong>Como se da el flujo de datos en la capa física. Quien realiza el trabajo de codificación de los datos, por donde viajan dichos datos. Especifique su respuesta con ejemplos ilustrativos.</strong></h2>
